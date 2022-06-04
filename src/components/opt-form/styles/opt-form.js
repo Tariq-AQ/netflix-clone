@@ -2,12 +2,12 @@ import styled from 'styled-components/macro'
 
 export const Container = styled.div`
 display: flex;
-
+align-items: center;
 flex-direction: row;
 justify-content: center;
 height: 100%;
 width: 100%;
-margin-top: 20px;
+margin-top: 5px;
 flex-wrap: wrap;
 
 @media(max-width: 1000px){
@@ -19,7 +19,7 @@ export const Button = styled.button`
 
 display: flex;
 align-items: center;
-height: 70px;
+height: 60px;
 background: #e50914;
 color: white;
 text-transformation: uppercase;
@@ -27,7 +27,7 @@ padding: 0 32px;
 font-size: 26px;
 border: 0;
 cursor: pointer;
-margin-top: 20px;
+margin:5px;
 
 
 &:hover{
@@ -36,11 +36,21 @@ margin-top: 20px;
 }
 
 @media(max-width: 1000px){
-    height: 50px;
+    height: 60px;
     font-size: 16px;
     margin-top: 20px;
     font-weight: bold;
     
+}
+@media(max-width: 600px){
+    height: 40px;
+    font-size: 16px;
+ 
+    
+}
+
+@media(max-width: 600px){
+    font-size:10px;
 }
 
 img{
@@ -58,7 +68,7 @@ color: white;
 text-align: center;
 
 @media(max-width: 600px){
-    font-size: 16px;
+    font-size: 12px;
     line-height: 22px;
 }
 `
@@ -68,8 +78,12 @@ export const Input = styled.input`
  width: 100%;
  border: 0;
  padding: 10px;
- height: 70px;
+ height: 60px;
  box-sizing: border-box;
+
+ @media(max-width: 600px){
+     height: 40px;
+ }
 
 `
 export const Break = styled.div`
