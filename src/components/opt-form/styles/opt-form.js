@@ -4,7 +4,7 @@ export const Container = styled.div`
 display: flex;
 align-items: center;
 flex-direction: row;
-justify-content: center;
+justify-content: space-between;
 height: 100%;
 width: 100%;
 margin-top: 5px;
@@ -15,19 +15,31 @@ flex-wrap: wrap;
     align-items: center;
 }
 `
+
+export const Text = styled.p`
+font-size: 19.2px;
+color: white;
+text-align: center;
+
+@media(max-width: 600px){
+    font-size: 12px;
+    line-height: 22px;
+}
+`
 export const Button = styled.button`
 
 display: flex;
+width:30%;
 align-items: center;
 height: 60px;
 background: #e50914;
 color: white;
 text-transformation: uppercase;
 padding: 0 32px;
-font-size: 26px;
+font-size: 16px;
 border: 0;
 cursor: pointer;
-margin:5px;
+margin:0;
 
 
 &:hover{
@@ -45,44 +57,32 @@ margin:5px;
 @media(max-width: 600px){
     height: 40px;
     font-size: 16px;
+    width:70%;
  
     
 }
 
-@media(max-width: 600px){
-    font-size:10px;
-}
 
 img{
     margin-left: 10px;
     filter: brightness(0) invert(1);
-    width: 24px;
+    width: 16px;
 
 
 }
 
-`
-export const Text = styled.p`
-font-size: 19.2px;
-color: white;
-text-align: center;
-
-@media(max-width: 600px){
-    font-size: 12px;
-    line-height: 22px;
-}
 `
 
 export const Input = styled.input`
  max-width: 450px;
- width: 100%;
+ width: 70%;
  border: 0;
  padding: 10px;
  height: 60px;
  box-sizing: border-box;
 
  @media(max-width: 600px){
-     height: 40px;
+     height: 50px;
  }
 
 `
