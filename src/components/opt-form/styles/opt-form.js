@@ -55,7 +55,7 @@ margin:0;
     
 }
 @media(max-width: 600px){
-    height: 40px;
+    height: 50px;
     font-size: 16px;
     width:70%;
  
@@ -74,7 +74,7 @@ img{
 `
 
 export const Input = styled.input`
- max-width: 450px;
+ max-width: 70%;
  width: 70%;
  border: 0;
  padding: 10px;

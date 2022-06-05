@@ -52,6 +52,10 @@ cursor: pointer;
 text-decoration: none;
 box-sizing: border-box;
 
+@media(min-width:600px){
+    margin-right: 50px;
+}
+
 &:hover{
     background-color: #f40612;
 }

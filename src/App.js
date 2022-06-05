@@ -6,7 +6,9 @@ import {
 } from "react-router-dom";
 import {Home, SignIn, SignUp, Browse} from './pages/index';
 
+
 export default function App() {
+  
   return (
     <BrowserRouter>
     <Routes>
