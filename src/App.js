@@ -5,10 +5,12 @@ import {
   Route
 } from "react-router-dom";
 import {Home, SignIn, SignUp, Browse} from './pages/index';
+import { IsUserRedirect } from './helpers/routes';
+
 
 
 export default function App() {
-  
+  const user =null;
   return (
     <BrowserRouter>
     <Routes>
