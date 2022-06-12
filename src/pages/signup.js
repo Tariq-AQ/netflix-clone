@@ -4,7 +4,7 @@ import { Form } from "../components";
 import { FooterContainer } from "../containers/footer";
 import { HeaderContainer } from "../containers/header";
 import * as ROUTES from '../constants/routes'
-import {useNavigate} from 'react-router-dom'
+import {useHistory} from 'react-router-dom'
 import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
 
 
@@ -12,7 +12,7 @@ import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
 
 
 export default function SignUp(){
-    const navigate = useNavigate();
+    const navigate = useHistory();
     const {firebase} = useContext(FirebaseContext);
     const [emailAddress, setEmailAddress] = useState('')
     const [password, setPassword] = useState('')
