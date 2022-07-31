@@ -47,7 +47,7 @@ width: 84px;
 height: fit-content;
 color: white;
 broder: 0;
-font-size: 8px;
+font-size: 12px;
 border-radius: 3px;
 padding: 8px 17px;
 cursor: pointer;

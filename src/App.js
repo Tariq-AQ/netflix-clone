@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import {
   BrowserRouter as Router,
   Routes,
@@ -14,9 +14,16 @@ import * as ROUTES from './constants/routes'
 
 
 export default function App() {
-  const {user} =useAuthListner();
+  const {user} = useAuthListner();
+
+  // const {user} =useAuthListner();
   // const user = null;
-  console.log(user)
+ if(user){
+
+console.log(user)
+} else{
+  console.log('app.js: no user found!')
+}
   return (
     <Router>
       <Switch>

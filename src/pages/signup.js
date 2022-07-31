@@ -12,7 +12,7 @@ import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
 
 
 export default function SignUp(){
-    const navigate = useHistory();
+    const history = useHistory();
     const {firebase} = useContext(FirebaseContext);
     const [emailAddress, setEmailAddress] = useState('')
     const [password, setPassword] = useState('')
@@ -21,18 +21,22 @@ export default function SignUp(){
     const auth = getAuth();
     
 
-    const isInvalid = password == '' || emailAddress == '';
+    const isInvalid = password === '' || emailAddress === '';
     const handleSignUp = (event)=>{
 
         event.preventDefault();
 
-     createUserWithEmailAndPassword(auth, emailAddress, password, firstname)
+     createUserWithEmailAndPassword(auth, emailAddress, password)
         .then((result)=>{
-           result.user.updateProfile({displayName: firstname,
-        photoURL: Math.floor(Math.random()*5)+1})
+            console.log(result.user)
+            result.user.updateProfile({
+
+            displayName: firstname,
+            photoURL: Math.floor(Math.random()*5)+1,
+    })
 
         }).then(()=>{
-            navigate(ROUTES.BROWSE);
+            history.push(ROUTES.BROWSE);
         }).catch((error)=>{
             setEmailAddress('');
             setPassword('');
