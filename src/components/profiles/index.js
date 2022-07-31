@@ -15,7 +15,7 @@ Profiles.Item = function ProfilesItem({children, ...restProps}){
     return  <Item {...restProps}>{children}</Item>
 }
 Profiles.Picture = function ProfilesPicture({src, ...restProps}){
-    return  <Picture {...restProps} src={src ? `../../images/users/${src}.png` : `/images/misc/loading.gif`}/>
+    return  <Picture {...restProps} src={src ? `../../images/users/${src}.png` : `/images/users/2.png`}/>
 }
 Profiles.Name = function ProfilesName({children, ...restProps}){
     return  <Name {...restProps}>{children}</Name>
